@@ -30,6 +30,15 @@ void LCD_vid_WRITE_CMD(uint8 copy_uint8_CMD){
 
 }
 
+void LCD_vid_WRITE_TO_CG_RAM(uint8 copy_uint8_Row_content){
+
+	DIO_vid_SETPIN(LCD_pin_RS , DIO_PIN_HIGH);
+
+	LCD_vid_EXCUTE_CMD(copy_uint8_Row_content);
+
+}
+
+
 void LCD_vid_WRITE_CHARACTER(uint8 copy_uint8_CHARACTER){
 
         DIO_vid_SETPIN(LCD_pin_RS, DIO_PIN_HIGH);
